@@ -1,1 +1,22 @@
-<p>repo-details works!</p>
+<table class="table table-borderless">
+    <thead class="tabel-repo-header">
+      <tr>
+        <th>Graph</th>
+        <th>Id</th>
+        <th>Author</th>
+        <th>Date</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let row of rowCommitData">
+            <tr class="tabel-repo-data">
+                <td><span class="dot"></span></td>
+                <td>{{row.shaid}}</td>
+                <td>{{row.name}}</td>
+                <td>{{row.date}}</td>
+                <td>{{row.message}}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+  </table>

@@ -1,0 +1,39 @@
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: inline-block;
+}
+thead.tabel-repo-header {
+    background-color: bisque;
+}
+span.dot {
+    position: relative;
+}
+span.dot:after {
+    content: "";
+    height: 60px;
+    border: 1px solid #cdcdcd;
+    width: 1px;
+    position: absolute;
+    top: 0;
+    left: 12px;
+    z-index: -1;
+}
+.table{ max-width: 880px;margin: 0 auto;
+     .tabel-repo-data{
+        &:last-child{
+            td{
+                &:first-child{
+                    .dot{
+                        &:after{display: none;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
