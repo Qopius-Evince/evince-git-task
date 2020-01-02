@@ -12,6 +12,7 @@ export class RepoService extends AbstractService {
   constructor(protected http: HttpClient) {
     super(http);
   }
+  //Call API to get All Commits from the Got Hub API
   getAllCommits() {
     return this.http.get<RepoDetails[]>(`${this.apiUrl}/repos/Qopius-Evince/evince-git-task/commits`, {})
     .pipe(catchError(this.handleError));

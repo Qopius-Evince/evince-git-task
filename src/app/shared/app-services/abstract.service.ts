@@ -11,6 +11,7 @@ import {throwError} from 'rxjs/internal/observable/throwError';
 })
 export class AbstractService {
 
+  //Base URL 
   protected apiUrl: string = "https://api.github.com";
   constructor(protected http: HttpClient) {
   }
